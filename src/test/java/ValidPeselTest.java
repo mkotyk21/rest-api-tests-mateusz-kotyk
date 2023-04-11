@@ -50,15 +50,12 @@ public class ValidPeselTest {
         };
     }
 
-
     @Test(dataProvider = "testValidPesel")
     public void validPesel(String fromDataProvider) {
 //providing the valid pesel from generator and checking if response is valid
         Response response = get(url + fromDataProvider);
-        System.out.println(response.body().asString());
         boolean isValid = response.path("isValid");
         Assert.assertTrue(isValid);
-
     }
 
     @Test(dataProvider = "testGender")
