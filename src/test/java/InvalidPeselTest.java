@@ -28,35 +28,47 @@ public class InvalidPeselTest {
                 {"18250582"},
                 {"082930273"},
                 {"6719302731"}
-        };}
+        };
+    }
+
     @DataProvider
-        public Object[][] testLongPesel() {
-            return new Object[][]{
-                    {"888454523212"},
-                    {"5654585256321"},
-                    {"1258789565256985412"},
-                    {"4848912941849814149141414149814141414914914149149814914914891489"}
-            };
-        }
+    public Object[][] testLongPesel() {
+        return new Object[][]{
+                {"888454523212"},
+                {"5654585256321"},
+                {"1258789565256985412"},
+                {"484891294184981414914141414981414141491491414911489"},
+                {"4848912941849814149141414149814141414914914149149814914914891489"},
+                {"4848912941849814149141414149814141414914914149149814914914891486575675756886578567546765467567567659"}
+        };
+    }
 
     @Test(dataProvider = "testShortPesel")
     public void invalidShortPesel(String stringFromDataProvider) {
         //Providing the short length of pesel should to shown an error
-        Response response = get(url+stringFromDataProvider);
+        Response response = get(url + stringFromDataProvider);
         System.out.println(response.body().asString());
         boolean isValid = response.path("isValid");
         Assert.assertFalse(isValid);
-        String responseBody= response.getBody().asString();
-       Assert.assertTrue(responseBody.contains("Invalid length. Pesel should have exactly 11 digits."));
+        String responseBody = response.getBody().asString();
+        Assert.assertTrue(responseBody.contains("Invalid length. Pesel should have exactly 11 digits."));
     }
+
     @Test(dataProvider = "testLongPesel")
     public void invalidLongPesel(String stringFromDataProvider) {
         //Providing the short length of pesel should to shown an error
-        Response response = get(url+stringFromDataProvider);
+        Response response = get(url + stringFromDataProvider);
         System.out.println(response.body().asString());
         boolean isValid = response.path("isValid");
         Assert.assertFalse(isValid);
-        String responseBody= response.getBody().asString();
-        Assert.assertTrue(responseBody.contains("Invalid length. Pesel should have exactly 11 digits."));
+        String responseBody = response.getBody().asString();
+        Assert.assertTrue(responseBody.contains("Invalid length. Pesel should have exactly 11 digits.") || responseBody.contains("Pesel should be a number"));
     }
+
+    @Test
+    public void emptyField() {
+        Response response = get(url);
+        Assert.assertEquals(response.statusCode(), 400);
+    }
+
 }

@@ -31,8 +31,28 @@ public class ValidPeselTest {
         };
     }
 
+    @DataProvider
+    public Object[][] testGender() {
+        return new Object[][]{
+                {"36471551596", "Male"}, {"61521954511", "Male"},
+                {"57861282737", "Male"}, {"18251515954", "Male"},
+                {"89100941752", "Male"}, {"40890115738", "Male"},
+                {"69440997055", "Male"}, {"72920158150", "Male"},
+                {"33072631371", "Male"}, {"08293027384", "Female"},
+                {"85251401693", "Male"}, {"07430829371", "Male"},
+                {"12251944613", "Male"}, {"37522139242", "Female"},
+                {"99032779646", "Female"}, {"40922368451", "Male"},
+                {"23522236423", "Female"}, {"74442358825", "Female"},
+                {"19240615088", "Female"}, {"52452245722", "Female"},
+                {"29280917862", "Female"}, {"59441031188", "Female"},
+                {"05310242584", "Female"}, {"11462926601", "Female"},
+                {"66321875589", "Female"}, {"77472673661", "Female"}
+        };
+    }
+
+
     @Test(dataProvider = "testValidPesel")
-    public void valifPesel(String fromDataProvider) {
+    public void validPesel(String fromDataProvider) {
 //providing the valid pesel from generator and checking if response is valid
         Response response = get(url + fromDataProvider);
         System.out.println(response.body().asString());
@@ -41,5 +61,11 @@ public class ValidPeselTest {
 
     }
 
+    @Test(dataProvider = "testGender")
+    public void genderTest(String fromDataProvider, String gender) {
+        Response response = get(url + fromDataProvider);
+        String genderValue = response.path("gender");
+        Assert.assertEquals(genderValue, gender);
+    }
 
 }
