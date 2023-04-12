@@ -1,14 +1,8 @@
-import io.restassured.RestAssured;
-import io.restassured.http.ContentType;
-import org.testng.annotations.BeforeClass;
-import org.testng.annotations.BeforeMethod;
 import org.testng.annotations.DataProvider;
 import org.testng.annotations.Test;
 import io.restassured.response.Response;
-import io.restassured.specification.*;
 
 import static io.restassured.RestAssured.get;
-import static io.restassured.RestAssured.post;
 
 import org.testng.Assert;
 
@@ -64,5 +58,4 @@ public class ValidPeselTest {
         String genderValue = response.path("gender");
         Assert.assertEquals(genderValue, gender);
     }
-
 }
