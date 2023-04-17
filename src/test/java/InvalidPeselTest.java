@@ -1,14 +1,10 @@
 import org.testng.annotations.DataProvider;
 import org.testng.annotations.Test;
 import io.restassured.response.Response;
-
 import static io.restassured.RestAssured.get;
-
 import org.testng.Assert;
-
 public class InvalidPeselTest {
-    String url = "https://peselvalidatorapitest.azurewebsites.net/api/Pesel?pesel=";
-
+    private String url = "https://peselvalidatorapitest.azurewebsites.net/api/Pesel?pesel=";
     @DataProvider
     public Object[][] incorrectMonth() {
         return new Object[][]{
@@ -19,7 +15,6 @@ public class InvalidPeselTest {
                 {"65800125872"}
         };
     }
-
     @DataProvider
     public Object[][] shortPesel() {
         return new Object[][]{
@@ -35,7 +30,17 @@ public class InvalidPeselTest {
                 {"6719302731"}
         };
     }
-
+    @DataProvider
+    public Object[][] strangeNumbers() {
+        return new Object[][]{
+                {"00000000000"},
+                {"33333333333"},
+                {"44444444444"},
+                {"66666666666"},
+                {"77777777777"},
+                {"99999999999"}
+        };
+    }
     @DataProvider
     public Object[][] invalidCheckSum() {
         return new Object[][]{
@@ -46,7 +51,6 @@ public class InvalidPeselTest {
                 {"72822054480"}, {"63911936350"}, {"15291864241"}, {"60320677813"}, {"60052643588"}, {"26111589871"}
         };
     }
-
     @DataProvider
     public Object[][] longPesel() {
         return new Object[][]{
@@ -58,7 +62,6 @@ public class InvalidPeselTest {
                 {"4848912941849814149141414149814141414914914149149814914914891486575675756886578567546765467567567659"}
         };
     }
-
     @DataProvider
     public Object[][] invalidCharacters() {
         return new Object[][]{
@@ -71,7 +74,6 @@ public class InvalidPeselTest {
                 {"WeccOYTpidx"}
         };
     }
-
     @DataProvider
     public Object[][] invalidDay() {
         return new Object[][]{
@@ -80,7 +82,6 @@ public class InvalidPeselTest {
                 {"61033280243"}, {"82884650523"}, {"31463523432"}, {"82433896612"}, {"88023168593"}, {"97827850761"}
         };
     }
-
     @Test(dataProvider = "shortPesel")
     public void testInvalidShortPesel(String stringFromDataProvider) {
         //Providing the short length of pesel should to shown an error
@@ -89,9 +90,7 @@ public class InvalidPeselTest {
         Assert.assertFalse(isValid);
         String responseBody = response.getBody().asString();
         Assert.assertTrue(responseBody.contains("Invalid length. Pesel should have exactly 11 digits."));
-
     }
-
     @Test(dataProvider = "longPesel")
     public void testInvalidLongPesel(String stringFromDataProvider) {
         //Providing the short length of pesel should to shown an error
@@ -101,13 +100,11 @@ public class InvalidPeselTest {
         String responseBody = response.getBody().asString();
         Assert.assertTrue(responseBody.contains("Invalid length. Pesel should have exactly 11 digits.") || responseBody.contains("Pesel should be a number"));
     }
-
     @Test
     public void testEmptyField() {
         Response response = get(url);
         Assert.assertEquals(response.statusCode(), 400);
     }
-
     @Test(dataProvider = "incorrectMonth")
     public void testIncorrectMonth(String fromDataProvider) {
         Response response = get(url + fromDataProvider);
@@ -116,7 +113,6 @@ public class InvalidPeselTest {
         String responseBody = response.getBody().asString();
         Assert.assertTrue(responseBody.contains("Invalid month"));
     }
-
     @Test(dataProvider = "invalidCheckSum")
     public void testIncorrectCheckSum(String fromDataProvider) {
         Response response = get(url + fromDataProvider);
@@ -125,7 +121,6 @@ public class InvalidPeselTest {
         String responseBody = response.getBody().asString();
         Assert.assertTrue(responseBody.contains("Check sum is invalid. Check last digit"));
     }
-
     @Test(dataProvider = "invalidCharacters")
     public void testInvalidCharacters(String fromDataProvider) {
         Response response = get(url + fromDataProvider);
@@ -133,9 +128,7 @@ public class InvalidPeselTest {
         Assert.assertFalse(isValid);
         String responseBody = response.getBody().asString();
         Assert.assertTrue(responseBody.contains("NBRQ"));
-
     }
-
     @Test(dataProvider = "invalidDay")
     public void testInvalidDay(String fromDataProvider) {
         Response response = get(url + fromDataProvider);
@@ -143,6 +136,11 @@ public class InvalidPeselTest {
         Assert.assertFalse(isValid);
         String responseBody = response.getBody().asString();
         Assert.assertTrue(responseBody.contains("INVD"));
-
+    }
+    @Test(dataProvider = "strangeNumbers")
+    public void testInvalidStrangeNumber(String fromDataProvider) {
+        Response response = get(url + fromDataProvider);
+        boolean isValid = response.path("isValid");
+        Assert.assertFalse(isValid);
     }
 }

@@ -4,7 +4,7 @@
     <option name="autoReloadType" value="SELECTIVE" />
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="1454f55c-e96d-4eac-b08d-0748d2d7f824" name="Changes" comment="2nd commit">
+    <list default="true" id="1454f55c-e96d-4eac-b08d-0748d2d7f824" name="Changes" comment="3rd commit">
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/test/java/InvalidPeselTest.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/test/java/InvalidPeselTest.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/test/java/ValidPeselTest.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/test/java/ValidPeselTest.java" afterDir="false" />
@@ -41,11 +41,11 @@
   }
 }</component>
   <component name="RunManager" selected="TestNG.&lt;default&gt;">
-    <configuration name="InvalidPeselTest.testInvalidCharacters" type="TestNG" temporary="true" nameIsGenerated="true">
+    <configuration name="InvalidPeselTest.testInvalidStrangeNumber" type="TestNG" temporary="true" nameIsGenerated="true">
       <module name="rest-api-tests-Mateusz-Kotyk" />
       <option name="PACKAGE_NAME" value="" />
       <option name="MAIN_CLASS_NAME" value="InvalidPeselTest" />
-      <option name="METHOD_NAME" value="testInvalidCharacters" />
+      <option name="METHOD_NAME" value="testInvalidStrangeNumber" />
       <option name="TEST_OBJECT" value="METHOD" />
       <properties />
       <listeners />
@@ -53,11 +53,11 @@
         <option name="Make" enabled="true" />
       </method>
     </configuration>
-    <configuration name="InvalidPeselTest.testInvalidDay" type="TestNG" temporary="true" nameIsGenerated="true">
+    <configuration name="ValidPeselTest.DOBtest" type="TestNG" temporary="true" nameIsGenerated="true">
       <module name="rest-api-tests-Mateusz-Kotyk" />
       <option name="PACKAGE_NAME" value="" />
-      <option name="MAIN_CLASS_NAME" value="InvalidPeselTest" />
-      <option name="METHOD_NAME" value="testInvalidDay" />
+      <option name="MAIN_CLASS_NAME" value="ValidPeselTest" />
+      <option name="METHOD_NAME" value="DOBtest" />
       <option name="TEST_OBJECT" value="METHOD" />
       <properties />
       <listeners />
@@ -65,11 +65,11 @@
         <option name="Make" enabled="true" />
       </method>
     </configuration>
-    <configuration name="InvalidPeselTest.testInvalidLongPesel" type="TestNG" temporary="true" nameIsGenerated="true">
+    <configuration name="ValidPeselTest.genderTest" type="TestNG" temporary="true" nameIsGenerated="true">
       <module name="rest-api-tests-Mateusz-Kotyk" />
       <option name="PACKAGE_NAME" value="" />
-      <option name="MAIN_CLASS_NAME" value="InvalidPeselTest" />
-      <option name="METHOD_NAME" value="testInvalidLongPesel" />
+      <option name="MAIN_CLASS_NAME" value="ValidPeselTest" />
+      <option name="METHOD_NAME" value="genderTest" />
       <option name="TEST_OBJECT" value="METHOD" />
       <properties />
       <listeners />
@@ -77,11 +77,11 @@
         <option name="Make" enabled="true" />
       </method>
     </configuration>
-    <configuration name="InvalidPeselTest.testInvalidShortPesel" type="TestNG" temporary="true" nameIsGenerated="true">
+    <configuration name="ValidPeselTest.validPesel" type="TestNG" temporary="true" nameIsGenerated="true">
       <module name="rest-api-tests-Mateusz-Kotyk" />
       <option name="PACKAGE_NAME" value="" />
-      <option name="MAIN_CLASS_NAME" value="InvalidPeselTest" />
-      <option name="METHOD_NAME" value="testInvalidShortPesel" />
+      <option name="MAIN_CLASS_NAME" value="ValidPeselTest" />
+      <option name="METHOD_NAME" value="validPesel" />
       <option name="TEST_OBJECT" value="METHOD" />
       <properties />
       <listeners />
@@ -102,10 +102,10 @@
     <recent_temporary>
       <list>
         <item itemvalue="TestNG.&lt;default&gt;" />
-        <item itemvalue="TestNG.InvalidPeselTest.testInvalidDay" />
-        <item itemvalue="TestNG.InvalidPeselTest.testInvalidLongPesel" />
-        <item itemvalue="TestNG.InvalidPeselTest.testInvalidCharacters" />
-        <item itemvalue="TestNG.InvalidPeselTest.testInvalidShortPesel" />
+        <item itemvalue="TestNG.ValidPeselTest.validPesel" />
+        <item itemvalue="TestNG.InvalidPeselTest.testInvalidStrangeNumber" />
+        <item itemvalue="TestNG.ValidPeselTest.DOBtest" />
+        <item itemvalue="TestNG.ValidPeselTest.genderTest" />
       </list>
     </recent_temporary>
   </component>
@@ -139,7 +139,14 @@
       <option name="project" value="LOCAL" />
       <updated>1681253141752</updated>
     </task>
-    <option name="localTasksCounter" value="4" />
+    <task id="LOCAL-00004" summary="3rd commit">
+      <created>1681329259204</created>
+      <option name="number" value="00004" />
+      <option name="presentableId" value="LOCAL-00004" />
+      <option name="project" value="LOCAL" />
+      <updated>1681329259204</updated>
+    </task>
+    <option name="localTasksCounter" value="5" />
     <servers />
   </component>
   <component name="Vcs.Log.Tabs.Properties">
@@ -156,7 +163,8 @@
   <component name="VcsManagerConfiguration">
     <MESSAGE value="1st commit" />
     <MESSAGE value="2nd commit" />
-    <option name="LAST_COMMIT_MESSAGE" value="2nd commit" />
+    <MESSAGE value="3rd commit" />
+    <option name="LAST_COMMIT_MESSAGE" value="3rd commit" />
   </component>
   <component name="com.intellij.coverage.CoverageDataManagerImpl">
     <SUITE FILE_PATH="coverage/rest_api_tests_Mateusz_Kotyk$_default_.ic" NAME="&lt;default&gt; Coverage Results" MODIFIED="1681251092716" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="idea" COVERAGE_BY_TEST_ENABLED="false" COVERAGE_TRACING_ENABLED="false" />
