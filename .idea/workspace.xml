@@ -4,9 +4,10 @@
     <option name="autoReloadType" value="SELECTIVE" />
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="1454f55c-e96d-4eac-b08d-0748d2d7f824" name="Changes" comment="3rd commit">
-      <change afterPath="$PROJECT_DIR$/src/test/java/PetStoreTest.java" afterDir="false" />
+    <list default="true" id="1454f55c-e96d-4eac-b08d-0748d2d7f824" name="Changes" comment="5th commit">
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/test/java/PetStoreTest.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/test/java/boredApiTest.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/test/java/ValidPeselTest.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/test/java/ValidPeselTest.java" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -39,55 +40,7 @@
     &quot;RunOnceActivity.ShowReadmeOnStart&quot;: &quot;true&quot;
   }
 }</component>
-  <component name="RunManager" selected="TestNG.PetStoreTest.postUserByUsername">
-    <configuration name="PetStoreTest.postUserByUsername" type="TestNG" temporary="true" nameIsGenerated="true">
-      <module name="rest-api-tests-Mateusz-Kotyk" />
-      <option name="PACKAGE_NAME" value="" />
-      <option name="MAIN_CLASS_NAME" value="PetStoreTest" />
-      <option name="METHOD_NAME" value="postUserByUsername" />
-      <option name="TEST_OBJECT" value="METHOD" />
-      <properties />
-      <listeners />
-      <method v="2">
-        <option name="Make" enabled="true" />
-      </method>
-    </configuration>
-    <configuration name="PetStoreTest.postfromHim" type="TestNG" temporary="true" nameIsGenerated="true">
-      <module name="rest-api-tests-Mateusz-Kotyk" />
-      <option name="PACKAGE_NAME" value="" />
-      <option name="MAIN_CLASS_NAME" value="PetStoreTest" />
-      <option name="METHOD_NAME" value="postfromHim" />
-      <option name="TEST_OBJECT" value="METHOD" />
-      <properties />
-      <listeners />
-      <method v="2">
-        <option name="Make" enabled="true" />
-      </method>
-    </configuration>
-    <configuration name="PetStoreTest.testWord" type="TestNG" temporary="true" nameIsGenerated="true">
-      <module name="rest-api-tests-Mateusz-Kotyk" />
-      <option name="PACKAGE_NAME" value="" />
-      <option name="MAIN_CLASS_NAME" value="PetStoreTest" />
-      <option name="METHOD_NAME" value="testWord" />
-      <option name="TEST_OBJECT" value="METHOD" />
-      <properties />
-      <listeners />
-      <method v="2">
-        <option name="Make" enabled="true" />
-      </method>
-    </configuration>
-    <configuration name="ValidPeselTest.validPesel" type="TestNG" temporary="true" nameIsGenerated="true">
-      <module name="rest-api-tests-Mateusz-Kotyk" />
-      <option name="PACKAGE_NAME" value="" />
-      <option name="MAIN_CLASS_NAME" value="ValidPeselTest" />
-      <option name="METHOD_NAME" value="validPesel" />
-      <option name="TEST_OBJECT" value="METHOD" />
-      <properties />
-      <listeners />
-      <method v="2">
-        <option name="Make" enabled="true" />
-      </method>
-    </configuration>
+  <component name="RunManager" selected="TestNG.&lt;default&gt;">
     <configuration name="&lt;default&gt;" type="TestNG" temporary="true" nameIsGenerated="true">
       <module name="rest-api-tests-Mateusz-Kotyk" />
       <option name="PACKAGE_NAME" value="" />
@@ -98,13 +51,61 @@
         <option name="Make" enabled="true" />
       </method>
     </configuration>
+    <configuration name="boredApiTest.invalidtest" type="TestNG" temporary="true" nameIsGenerated="true">
+      <module name="rest-api-tests-Mateusz-Kotyk" />
+      <option name="PACKAGE_NAME" value="" />
+      <option name="MAIN_CLASS_NAME" value="boredApiTest" />
+      <option name="METHOD_NAME" value="invalidtest" />
+      <option name="TEST_OBJECT" value="METHOD" />
+      <properties />
+      <listeners />
+      <method v="2">
+        <option name="Make" enabled="true" />
+      </method>
+    </configuration>
+    <configuration name="boredApiTest.postUserByUsername" type="TestNG" temporary="true" nameIsGenerated="true">
+      <module name="rest-api-tests-Mateusz-Kotyk" />
+      <option name="PACKAGE_NAME" value="" />
+      <option name="MAIN_CLASS_NAME" value="boredApiTest" />
+      <option name="METHOD_NAME" value="postUserByUsername" />
+      <option name="TEST_OBJECT" value="METHOD" />
+      <properties />
+      <listeners />
+      <method v="2">
+        <option name="Make" enabled="true" />
+      </method>
+    </configuration>
+    <configuration name="boredApiTest.testByKeyActivity" type="TestNG" temporary="true" nameIsGenerated="true">
+      <module name="rest-api-tests-Mateusz-Kotyk" />
+      <option name="PACKAGE_NAME" value="" />
+      <option name="MAIN_CLASS_NAME" value="boredApiTest" />
+      <option name="METHOD_NAME" value="testByKeyActivity" />
+      <option name="TEST_OBJECT" value="METHOD" />
+      <properties />
+      <listeners />
+      <method v="2">
+        <option name="Make" enabled="true" />
+      </method>
+    </configuration>
+    <configuration name="boredApiTest.testByTypeActivity" type="TestNG" temporary="true" nameIsGenerated="true">
+      <module name="rest-api-tests-Mateusz-Kotyk" />
+      <option name="PACKAGE_NAME" value="" />
+      <option name="MAIN_CLASS_NAME" value="boredApiTest" />
+      <option name="METHOD_NAME" value="testByTypeActivity" />
+      <option name="TEST_OBJECT" value="METHOD" />
+      <properties />
+      <listeners />
+      <method v="2">
+        <option name="Make" enabled="true" />
+      </method>
+    </configuration>
     <recent_temporary>
       <list>
-        <item itemvalue="TestNG.PetStoreTest.postUserByUsername" />
-        <item itemvalue="TestNG.PetStoreTest.postfromHim" />
-        <item itemvalue="TestNG.PetStoreTest.testWord" />
         <item itemvalue="TestNG.&lt;default&gt;" />
-        <item itemvalue="TestNG.ValidPeselTest.validPesel" />
+        <item itemvalue="TestNG.boredApiTest.invalidtest" />
+        <item itemvalue="TestNG.boredApiTest.testByKeyActivity" />
+        <item itemvalue="TestNG.boredApiTest.testByTypeActivity" />
+        <item itemvalue="TestNG.boredApiTest.postUserByUsername" />
       </list>
     </recent_temporary>
   </component>
@@ -152,7 +153,14 @@
       <option name="project" value="LOCAL" />
       <updated>1681755640332</updated>
     </task>
-    <option name="localTasksCounter" value="6" />
+    <task id="LOCAL-00006" summary="5th commit">
+      <created>1681768974572</created>
+      <option name="number" value="00006" />
+      <option name="presentableId" value="LOCAL-00006" />
+      <option name="project" value="LOCAL" />
+      <updated>1681768974572</updated>
+    </task>
+    <option name="localTasksCounter" value="7" />
     <servers />
   </component>
   <component name="Vcs.Log.Tabs.Properties">
@@ -170,18 +178,8 @@
     <MESSAGE value="1st commit" />
     <MESSAGE value="2nd commit" />
     <MESSAGE value="3rd commit" />
-    <option name="LAST_COMMIT_MESSAGE" value="3rd commit" />
-  </component>
-  <component name="XDebuggerManager">
-    <breakpoint-manager>
-      <breakpoints>
-        <line-breakpoint enabled="true" type="java-line">
-          <url>file://$PROJECT_DIR$/src/test/java/PetStoreTest.java</url>
-          <line>25</line>
-          <option name="timeStamp" value="6" />
-        </line-breakpoint>
-      </breakpoints>
-    </breakpoint-manager>
+    <MESSAGE value="5th commit" />
+    <option name="LAST_COMMIT_MESSAGE" value="5th commit" />
   </component>
   <component name="com.intellij.coverage.CoverageDataManagerImpl">
     <SUITE FILE_PATH="coverage/rest_api_tests_Mateusz_Kotyk$_default_.ic" NAME="&lt;default&gt; Coverage Results" MODIFIED="1681251092716" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="idea" COVERAGE_BY_TEST_ENABLED="false" COVERAGE_TRACING_ENABLED="false" />

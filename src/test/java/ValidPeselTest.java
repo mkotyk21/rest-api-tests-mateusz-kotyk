@@ -1,9 +1,7 @@
 import org.testng.annotations.DataProvider;
 import org.testng.annotations.Test;
 import io.restassured.response.Response;
-
 import static io.restassured.RestAssured.get;
-
 import org.testng.Assert;
 
 public class ValidPeselTest {
